@@ -1,5 +1,6 @@
 """FastAPI backend application for AI-Based Bicycle Rental Demand Prediction."""
 
+import os
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, HTTPException
@@ -41,9 +42,22 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+# Configure CORS origins: allow configurable frontend URLs via FRONTEND_URL or CORS_ORIGINS
+raw_origins = os.getenv("FRONTEND_URL", os.getenv("CORS_ORIGINS", "*"))
+if raw_origins == "*":
+    origins = ["*"]
+else:
+    origins = [origin.strip() for origin in raw_origins.split(",") if origin.strip()]
+    # Ensure standard local Vite dev ports are always permitted for local testing
+    for local_url in ["http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:3000"]:
+        if local_url not in origins:
+            origins.append(local_url)
+
+logger.info("Configured CORS origins: %s", origins)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
