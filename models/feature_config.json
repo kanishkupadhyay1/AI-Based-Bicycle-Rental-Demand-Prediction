@@ -1,0 +1,183 @@
+{
+  "features": [
+    "season",
+    "yr",
+    "mnth",
+    "hr",
+    "holiday",
+    "weekday",
+    "workingday",
+    "weathersit",
+    "temp",
+    "atemp",
+    "hum",
+    "windspeed"
+  ],
+  "categorical_features": [
+    "season",
+    "yr",
+    "holiday",
+    "weekday",
+    "workingday",
+    "weathersit"
+  ],
+  "continuous_features": [
+    "temp",
+    "atemp",
+    "hum",
+    "windspeed"
+  ],
+  "temporal_continuous_features": [
+    "hr",
+    "mnth"
+  ],
+  "target": "cnt",
+  "ranges": {
+    "season": {
+      "min": 1.0,
+      "max": 4.0,
+      "mean": 2.2638,
+      "median": 2.0,
+      "default": 2,
+      "unique_values": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "yr": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.3782,
+      "median": 0.0,
+      "default": 0,
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "mnth": {
+      "min": 1.0,
+      "max": 12.0,
+      "mean": 5.6501,
+      "median": 5.0,
+      "default": 5,
+      "unique_values": null
+    },
+    "hr": {
+      "min": 0.0,
+      "max": 23.0,
+      "mean": 11.5466,
+      "median": 12.0,
+      "default": 12,
+      "unique_values": null
+    },
+    "holiday": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.0274,
+      "median": 0.0,
+      "default": 0,
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "weekday": {
+      "min": 0.0,
+      "max": 6.0,
+      "mean": 2.9994,
+      "median": 3.0,
+      "default": 3,
+      "unique_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "workingday": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.6845,
+      "median": 1.0,
+      "default": 1,
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "weathersit": {
+      "min": 1.0,
+      "max": 4.0,
+      "mean": 1.42,
+      "median": 1.0,
+      "default": 1,
+      "unique_values": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "temp": {
+      "min": 0.02,
+      "max": 1.0,
+      "mean": 0.4992,
+      "median": 0.5,
+      "default": 0.5,
+      "unique_values": null
+    },
+    "atemp": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.478,
+      "median": 0.4848,
+      "default": 0.4848,
+      "unique_values": null
+    },
+    "hum": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.623,
+      "median": 0.62,
+      "default": 0.62,
+      "unique_values": null
+    },
+    "windspeed": {
+      "min": 0.0,
+      "max": 0.8507,
+      "mean": 0.1941,
+      "median": 0.194,
+      "default": 0.194,
+      "unique_values": null
+    }
+  },
+  "transformed_feature_names": [
+    "num__hr",
+    "num__mnth",
+    "num__temp",
+    "num__atemp",
+    "num__hum",
+    "num__windspeed",
+    "cat__season_2",
+    "cat__season_3",
+    "cat__season_4",
+    "cat__yr_1",
+    "cat__holiday_1",
+    "cat__weekday_1",
+    "cat__weekday_2",
+    "cat__weekday_3",
+    "cat__weekday_4",
+    "cat__weekday_5",
+    "cat__weekday_6",
+    "cat__workingday_1",
+    "cat__weathersit_2",
+    "cat__weathersit_3",
+    "cat__weathersit_4"
+  ]
+}

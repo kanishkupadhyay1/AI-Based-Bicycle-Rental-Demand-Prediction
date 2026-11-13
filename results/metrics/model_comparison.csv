@@ -1,0 +1,5 @@
+model,mae,rmse,deviance_explained
+Generalized Additive Model (GAM),79.206,113.4433,0.8059
+Linear Regression,136.7756,182.8389,0.4233
+Random Forest Regressor,49.7899,76.1299,0.9095
+Gradient Boosting Regressor,46.386,70.7192,0.92
